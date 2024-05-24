@@ -53,7 +53,7 @@ $circular: "CircularStd", sans-serif;
     }
 }
 
-@mixin h4-heading($color: $darkgreen, $font-size: 28px, $margin-left: $size-xlg, $padding-y: $size-xmd, $before-color: $white, $before-height: 60px, $before-width: 60px, $before-top: 10px, $background-image: url(/img/envelope.svg)) {
+@mixin h4-heading($color: $darkgreen, $font-size: 28px, $margin-left: $size-xlg, $padding-y: $size-xmd, $before-color: $white, $before-height: 60px, $before-width: 60px, $before-top: 10px, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/envelope.svg)) {
     color: $color;
     font-size: 26px;
     margin: 0;
@@ -144,7 +144,7 @@ $circular: "CircularStd", sans-serif;
                 padding: $size-xlg;
             }
             h4 {
-                @include h4-heading($before-color: $darkgreen, $background-image: url(/img/megaphone.svg));
+                @include h4-heading($before-color: $darkgreen, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/megaphone.svg));
                 padding: 0 $size-md $size-md $size-md;
                 @media screen and (min-width: 575px) {
                     margin-bottom: $size-sm;
@@ -200,7 +200,7 @@ $circular: "CircularStd", sans-serif;
                 align-items: flex-start;
                 gap: $size-sm;
                 h4 {
-                    @include h4-heading($white, $background-image: url(img/check.svg));
+                    @include h4-heading($white, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/check.svg));
                 }
                 p {
                     @include paragraph($margin-bottom: 0, $font-size:18px, $line-height: 1.5);
@@ -239,7 +239,7 @@ $circular: "CircularStd", sans-serif;
                     border-top: 0;
                 }
                 h4 {
-                    @include h4-heading($color: $brown, $before-color: $yellow, $background-image: url(/img/star.svg));
+                    @include h4-heading($color: $brown, $before-color: $yellow, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/star.svg));
                 }
                 p {
                     @include paragraph($margin-top: $size-sm, $font-size: 18px);
