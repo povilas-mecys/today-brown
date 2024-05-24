@@ -200,7 +200,7 @@ $circular: "CircularStd", sans-serif;
                 align-items: flex-start;
                 gap: $size-sm;
                 h4 {
-                    @include h4-heading($white, $background-image: url(/img/check.svg));
+                    @include h4-heading($white, $background-image: url(img/check.svg));
                 }
                 p {
                     @include paragraph($margin-bottom: 0, $font-size:18px, $line-height: 1.5);
