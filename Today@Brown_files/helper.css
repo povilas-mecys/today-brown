@@ -1,0 +1,37 @@
+body {   
+    background-color: rgb(240, 243, 245);
+ }
+
+ .page-container{
+    background-color: transparent
+ }
+
+.iBeaUU {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 900px){
+.iBeaUU {
+    width: calc(100% - 40px);
+}
+}
+
+@media screen and (min-width: 1280px){
+    .iBeaUU {
+        min-width:  1240px;
+        width: 87%;
+        max-width: 1400px;
+    }
+ 
+}
+ 
+ 
+
+*{
+    outline:   px solid rgba(255, 0, 0, 0.171);
+}
