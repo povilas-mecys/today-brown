@@ -158,7 +158,7 @@ sans-serif;
                     padding: $size-lg;
                 }
                 h4 {
-                    @include h4-heading($before-color: $yellow, $background-image: url(/img/rtf.svg));
+                    @include h4-heading($before-color: $yellow, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/rtf.svg));
                     color: $brown;
                     @media screen and (min-width: 575px) {
                         margin-bottom: $size-sm;
@@ -231,7 +231,7 @@ sans-serif;
                 padding: $size-lg;
             }
             h4 {
-                @include h4-heading($color: $darkgreen, $before-color: $darkgreen, $background-image: url(/img/integration.svg));
+                @include h4-heading($color: $darkgreen, $before-color: $darkgreen, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/integration.svg));
             }
             article.integration {
                 border-top: $size-base solid lighten($dgray, $size-lg);
