@@ -1,0 +1,579 @@
+/*  Repeating SCSS ========================================================================================== */
+/* End Repeating SCSS ========================================================================================== */
+/* New Features in Today@Brown */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: auto;
+  width: calc(100% - 40px);
+}
+.features .container {
+  padding: 32px;
+}
+@media screen and (min-width: 575px) {
+  .features .container {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container {
+    padding: 80px;
+  }
+}
+.features .container.intro {
+  background-color: rgb(255, 255, 255);
+}
+.features .container.intro h3 {
+  border-bottom: 2px solid #d3d6d9;
+  font-family: "CircularStd", sans-serif;
+  margin: 0 0 32px 0;
+  padding-bottom: 24px;
+}
+.features .container.intro p {
+  font-family: "minion-pro", serif;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 32px 0;
+}
+@media screen and (min-width: 575px) {
+  .features .container.intro p {
+    font-family: "minion-pro", serif;
+    font-size: 18px;
+    line-height: 1.75;
+    margin: 0 0 32px 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.intro p {
+    font-family: "minion-pro", serif;
+    font-size: 22px;
+    line-height: 1.75;
+    margin: 0 0 32px 0;
+  }
+}
+.features .container.intro .links a.button {
+  background-color: rgb(240, 243, 245);
+  border: 2px solid #eaeef1;
+  border-radius: 4px;
+  color: #5c636a;
+  display: inline-block;
+  font-family: "CircularStd", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 8px 8px 8px 0;
+  padding: 24px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.25s;
+}
+@media screen and (min-width: 575px) {
+  .features .container.intro .links a.button {
+    font-size: 16px;
+  }
+}
+.features .container.intro .links a.button:hover {
+  background-color: #cbd6dd;
+  border-color: #c5d1d8;
+}
+.features .container.intro .links a.button:active {
+  background-color: #bfccd4;
+  border-color: #b9c7d0;
+}
+.features .container.formatting {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .features .container.formatting {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 40px;
+  }
+}
+.features .container.formatting article {
+  background: rgb(255, 255, 255);
+  color: rgb(78, 54, 41);
+  flex-basis: 75%;
+  padding: 32px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting article {
+    padding: 40px;
+  }
+}
+.features .container.formatting article h4 {
+  color: rgb(0, 134, 114);
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 0;
+  padding: 0 0 16px 0;
+  position: relative;
+  color: rgb(78, 54, 41);
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting article h4 {
+    font-size: 28px;
+    margin-left: 80px;
+    padding: 24px 0;
+  }
+}
+.features .container.formatting article h4:before {
+  background-color: #FFC72C;
+  background-image: url(/img/rtf.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 30px;
+  border-radius: 40px;
+  content: "";
+  display: none;
+  height: 60px;
+  margin-left: -80px;
+  position: absolute;
+  top: 10px;
+  width: 60px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting article h4:before {
+    display: block;
+  }
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting article h4 {
+    margin-bottom: 16px;
+  }
+}
+.features .container.formatting article p {
+  border-bottom: 4px solid #FFC72C;
+  font-family: "CircularStd", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 32px 0;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting article p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.formatting article p {
+    font-size: 20px;
+  }
+}
+.features .container.formatting article ul {
+  margin: 0;
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting article ul {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+.features .container.formatting article ul li {
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting article ul li {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.formatting article ul li {
+    font-size: 20px;
+  }
+}
+.features .container.formatting > p {
+  background: #FFC72C;
+  color: rgb(78, 54, 41);
+  flex-basis: 25%;
+  font-family: "CircularStd", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 32px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.formatting > p {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.formatting > p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .features .container.formatting > p {
+    font-size: 18px;
+  }
+}
+.features .container.integration {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+}
+@media screen and (min-width: 575px) {
+  .features .container.integration {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.integration {
+    padding: 40px;
+  }
+}
+.features .container.integration h4 {
+  color: rgb(0, 134, 114);
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 0;
+  padding: 0 0 16px 0;
+  position: relative;
+}
+@media screen and (min-width: 575px) {
+  .features .container.integration h4 {
+    font-size: 28px;
+    margin-left: 80px;
+    padding: 24px 0;
+  }
+}
+.features .container.integration h4:before {
+  background-color: rgb(0, 134, 114);
+  background-image: url(/img/integration.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 30px;
+  border-radius: 40px;
+  content: "";
+  display: none;
+  height: 60px;
+  margin-left: -80px;
+  position: absolute;
+  top: 10px;
+  width: 60px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.integration h4:before {
+    display: block;
+  }
+}
+.features .container.integration article.integration {
+  border-top: 4px solid #d3d6d9;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 40px 0 0 0;
+}
+@media screen and (min-width: 900px) {
+  .features .container.integration article.integration {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.features .container.integration article.integration div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  order: 1;
+}
+@media screen and (min-width: 900px) {
+  .features .container.integration article.integration div {
+    order: 0;
+  }
+}
+.features .container.integration article.integration div p {
+  font-family: "minion-pro", serif;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 0 0;
+  color: rgb(78, 54, 41);
+  line-height: 1.5;
+}
+@media screen and (min-width: 575px) {
+  .features .container.integration article.integration div p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.integration article.integration div p {
+    font-size: 20px;
+  }
+}
+.features .container.integration article.integration div a.button {
+  background-color: rgb(192, 4, 4);
+  border: 2px solid rgb(192, 4, 4);
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-family: "CircularStd", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 8px 8px 8px 0;
+  padding: 24px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.25s;
+}
+@media screen and (min-width: 575px) {
+  .features .container.integration article.integration div a.button {
+    font-size: 18px;
+  }
+}
+.features .container.integration article.integration div a.button:hover {
+  background-color: #840303;
+  border-color: #840303;
+}
+.features .container.integration article.integration div a.button:active {
+  background-color: #700202;
+  border-color: #700202;
+}
+@media screen and (min-width: 575px) {
+  .features .container.integration article.integration div a.button {
+    padding: 24px 40px;
+  }
+}
+.features .container.integration article.integration figure {
+  margin: 0;
+}
+.features .container.integration article.integration figure img {
+  height: auto;
+  width: 100%;
+}
+.features .container.integration .tips {
+  align-items: stretch;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .features .container.integration .tips {
+    background-color: #f0f3f5;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 80px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.integration .tips {
+    padding: 40px;
+  }
+}
+.features .container.integration .tips h5 {
+  color: rgb(78, 54, 41);
+  font-family: "CircularStd", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.25;
+  margin: 24px 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features .container.integration .tips h5 {
+    font-size: 28px;
+  }
+}
+.features .container.integration .tips div {
+  align-items: flex-start;
+  align-self: stretch;
+  background: rgb(255, 255, 255);
+  display: flex;
+  gap: 24px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.integration .tips div {
+    border: 1px solid rgb(240, 243, 245);
+    padding: 32px 32px 32px 32px;
+  }
+}
+.features .container.integration .tips div p {
+  font-family: "CircularStd", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 0 0;
+  border-left: 2px solid rgb(192, 4, 4);
+  color: rgb(78, 54, 41);
+  font-family: "CircularStd", sans-serif;
+  padding: 16px 24px;
+}
+@media screen and (min-width: 768px) {
+  .features .container.integration .tips div p {
+    font-size: 18px;
+    padding: 8px 8px 8px 32px;
+  }
+}
+.features .container.submissions {
+  padding: 0;
+}
+@media screen and (min-width: 575px) {
+  .features .container.submissions {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.submissions {
+    padding: 40px;
+  }
+}
+.features .container.submissions header h4 {
+  color: rgb(0, 134, 114);
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 0;
+  padding: 0 0 16px 0;
+  position: relative;
+  color: rgb(192, 4, 4);
+}
+@media screen and (min-width: 575px) {
+  .features .container.submissions header h4 {
+    font-size: 28px;
+    margin-left: 80px;
+    padding: 24px 0;
+  }
+}
+.features .container.submissions header h4:before {
+  background-color: rgb(192, 4, 4);
+  background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/megaphone.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 30px;
+  border-radius: 40px;
+  content: "";
+  display: none;
+  height: 60px;
+  margin-left: -80px;
+  position: absolute;
+  top: 10px;
+  width: 60px;
+}
+@media screen and (min-width: 575px) {
+  .features .container.submissions header h4:before {
+    display: block;
+  }
+}
+.features .container.submissions header p {
+  font-family: "CircularStd", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 32px 0;
+  color: rgb(104, 112, 120);
+  line-height: 1.5;
+}
+@media screen and (min-width: 575px) {
+  .features .container.submissions header p {
+    font-size: 18px;
+    margin: 0 0 40px 80px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.submissions header p {
+    font-size: 20px;
+  }
+}
+.features .container.submissions div {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) {
+  .features .container.submissions div {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .container.submissions div {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.features .container.submissions div article {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 4px solid rgb(192, 4, 4);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: flex-start;
+  padding: 24px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features .container.submissions div article {
+    padding: 40px;
+  }
+}
+.features .container.submissions div article img {
+  aspect-ratio: 1/1;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 100px;
+}
+.features .container.submissions div article p {
+  font-family: "minion-pro", serif;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 0 0;
+  color: rgb(78, 54, 41);
+  font-size: 16px;
+  text-align: left;
+}
+@media screen and (min-width: 780px) {
+  .features .container.submissions div article p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .features .container.submissions div article p {
+    font-size: 20px;
+  }
+}
+.features .contact {
+  font-family: "CircularStd", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 32px 0;
+  color: rgb(104, 112, 120);
+  margin: 40px auto;
+  text-align: center;
+}
+@media screen and (min-width: 575px) {
+  .features .contact {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .features .contact {
+    font-size: 20px;
+  }
+}
+.features .contact a {
+  color: rgb(192, 4, 4);
+  font-family: "CircularStd", sans-serif;
+  font-weight: bold;
+}/*# sourceMappingURL=about.css.map */

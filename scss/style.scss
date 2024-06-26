@@ -6,7 +6,6 @@ $size-xmd: $size-base * 6; // 24px
 $size-md: $size-base * 8; // 32px 
 $size-lg: $size-base * 10; // 40px  
 $size-xlg: $size-base * 20; // 80px 
-
 // Color Variables
 $white: rgb(255, 255, 255);
 $gray: rgba(240, 243, 245, 1);
@@ -20,11 +19,11 @@ $black: rgb(0, 0, 0);
 $mediumgreen: rgb(0, 179, 152);
 $darkgreen: rgb(0, 134, 114);
 $yellow: #FFC72C;
-
 // Font Variables
-$minion: "minion-pro", serif;
-$circular: "CircularStd", sans-serif;
-
+$minion: "minion-pro",
+serif;
+$circular: "CircularStd",
+sans-serif;
 // Mixins
 @mixin button($border-color, $bg-color, $text-color: #fff, $font-size: $size-sm, $padding: $size-xmd $size-md) {
     background-color: $bg-color;

@@ -1,0 +1,431 @@
+/*  Repeating SCSS ========================================================================================== */
+// Size Variables
+$size-base: 4px; // Base unit
+$size-xsm: $size-base * 2; // 8px  
+$size-sm: $size-base * 4; // 16px  
+$size-xmd: $size-base * 6; // 24px  
+$size-md: $size-base * 8; // 32px 
+$size-lg: $size-base * 10; // 40px  
+$size-xlg: $size-base * 20; // 80px 
+// Color Variables
+$white: rgb(255, 255, 255);
+$gray: rgba(240, 243, 245, 1);
+$lgray: rgb(248, 247, 245);
+$dgray: rgb(104, 112, 120);
+$lbeige: rgb(215, 211, 200);
+$xlbeige: rgb(239, 236, 229);
+$red: rgb(192, 4, 4);
+$brown: rgb(78, 54, 41);
+$black: rgb(0, 0, 0);
+$mediumgreen: rgb(0, 179, 152);
+$darkgreen: rgb(0, 134, 114);
+$yellow: #FFC72C;
+// Font Variables
+$minion: "minion-pro",
+serif;
+$circular: "CircularStd",
+sans-serif;
+// Mixins
+@mixin button($border-color, $bg-color, $text-color: #fff, $font-size: $size-sm, $padding: $size-xmd $size-md) {
+    background-color: $bg-color;
+    border: 2px solid $border-color;
+    border-radius: $size-base;
+    color: $text-color;
+    display: inline-block;
+    font-family: $circular;
+    font-size: 14px;
+    font-weight: bold;
+    margin: $size-xsm $size-xsm $size-xsm 0;
+    padding: $padding;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.25s;
+    @media screen and (min-width: 575px) {
+        font-size: $font-size;
+    }
+    &:hover {
+        background-color: darken($bg-color, 12%);
+        border-color: darken($border-color, 12%);
+    }
+    &:active {
+        background-color: darken($bg-color, 16%);
+        border-color: darken($border-color, 16%);
+    }
+}
+
+@mixin h4-heading($color: $darkgreen, $font-size: 28px, $margin-left: $size-xlg, $padding-y: $size-xmd, $before-color: $white, $before-height: 60px, $before-width: 60px, $before-top: 10px, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/envelope.svg)) {
+    color: $color;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 0;
+    padding: 0 0 $size-sm 0;
+    position: relative;
+    @media screen and (min-width: 575px) {
+        font-size: $font-size;
+        margin-left: $margin-left;
+        padding: $padding-y 0;
+    }
+    &:before {
+        background-color: $before-color;
+        background-image: $background-image;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 30px;
+        border-radius: $size-lg;
+        content: "";
+        display: none;
+        height: $before-height;
+        margin-left: -$margin-left;
+        position: absolute;
+        top: $before-top;
+        width: $before-width;
+        @media screen and (min-width: 575px) {
+            display: block;
+        }
+    }
+}
+
+@mixin paragraph($font-size: calc($size-sm + $size-base), $line-height: 1.75, $margin-bottom: $size-md, $margin-top: 0, $font-family: $minion) {
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $margin-top 0 $margin-bottom 0;
+}
+/* End Repeating SCSS ========================================================================================== */
+/* New Features in Today@Brown */
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: $size-lg;
+    margin: auto;
+    width: calc(100% - 40px);
+    .container {
+        padding: $size-md;
+        @media screen and (min-width: 575px) {
+            padding: $size-lg;
+        }
+        @media screen and (min-width: 900px) {
+            padding: $size-xlg;
+        }
+        &.intro {
+            background-color: $white;
+            h3 {
+                border-bottom: 2px solid lighten($dgray, $size-lg);
+                font-family: $circular;
+                margin: 0 0 $size-md 0;
+                padding-bottom: $size-xmd;
+            }
+            p {
+                @include paragraph($font-size: 16px);
+                @media screen and (min-width: 575px) {
+                    @include paragraph($font-size: 18px);
+                }
+                @media screen and (min-width: 900px) {
+                    @include paragraph($font-size: 22px);
+                }
+            }
+            .links {
+                a {
+                    &.button {
+                        @include button(darken($gray, 2%), $gray, darken($dgray, 5%));
+                    }
+                }
+            }
+        }
+        &.formatting {
+            display: flex;
+            flex-direction: column;
+            gap: $size-xsm;
+            padding: 0;
+            @media screen and (min-width: 575px) {
+                background-color: rgba($white, 0.5);
+                border: 1px solid $white;
+                padding: $size-lg;
+            }
+            @media screen and (min-width: 1080px) {
+                align-self: stretch;
+                flex-direction: row;
+                padding: $size-lg;
+            }
+            article {
+                background: $white;
+                color: $brown;
+                flex-basis: 75%;
+                padding: $size-md;
+                @media screen and (min-width: 575px) {
+                    padding: $size-lg;
+                }
+                h4 {
+                    @include h4-heading($before-color: $yellow, $background-image: url(/img/rtf.svg));
+                    color: $brown;
+                    @media screen and (min-width: 575px) {
+                        margin-bottom: $size-sm;
+                    }
+                }
+                p {
+                    border-bottom: $size-base solid $yellow;
+                    font-family: $circular;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin: 0 0 $size-md 0;
+                    padding-bottom: $size-xmd;
+                    @media screen and (min-width: 575px) {
+                        font-size: 18px;
+                    }
+                    @media screen and (min-width: 900px) {
+                        font-size: 20px;
+                    }
+                }
+                ul {
+                    margin: 0;
+                    @media screen and (min-width: 575px) {
+                        columns: 2;
+                    }
+                    li {
+                        font-size: 16px;
+                        padding-bottom: $size-xsm;
+                        @media screen and (min-width: 575px) {
+                            font-size: 18px;
+                        }
+                        @media screen and (min-width: 900px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            >p {
+                background: $yellow;
+                color: $brown;
+                flex-basis: 25%;
+                font-family: $circular;
+                font-size: 16px;
+                line-height: 1.5;
+                margin: 0;
+                padding: $size-md;
+                @media screen and (min-width: 575px) {
+                    padding: $size-lg;
+                }
+                @media screen and (min-width: 900px) {
+                    font-size: 16px;
+                }
+                @media screen and (min-width: 1080px) {
+                    font-size: 18px;
+                }
+            }
+        }
+        &.integration {
+            align-items: flex-start;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            gap: $size-sm;
+            padding: 0;
+            @media screen and (min-width: 575px) {
+                background-color: rgba($white, 0.5);
+                border: 1px solid $white;
+                padding: $size-lg;
+            }
+            @media screen and (min-width: 900px) {
+                padding: $size-lg;
+            }
+            h4 {
+                @include h4-heading($color: $darkgreen, $before-color: $darkgreen, $background-image: url(/img/integration.svg));
+            }
+            article.integration {
+                border-top: $size-base solid lighten($dgray, $size-lg);
+                display: grid;
+                gap: $size-lg;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                padding: $size-lg 0 0 0;
+                @media screen and (min-width: 575px) {}
+                @media screen and (min-width: 900px) {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                }
+                div {
+                    align-items: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    gap: $size-sm;
+                    order: 1;
+                    @media screen and (min-width: 900px) {
+                        order: 0;
+                    }
+                    p {
+                        @include paragraph($margin-bottom: 0, $font-size: 16px);
+                        color: $brown;
+                        line-height: 1.5;
+                        @media screen and (min-width: 575px) {
+                            font-size: 18px;
+                        }
+                        @media screen and (min-width: 900px) {
+                            font-size: 20px;
+                        }
+                    }
+                    a {
+                        &.button {
+                            @include button($red, $red, $white, $font-size: 18px, $padding: $size-xmd $size-sm);
+                            @media screen and (min-width: 575px) {
+                                padding: $size-xmd $size-lg;
+                            }
+                        }
+                    }
+                }
+                figure {
+                    margin: 0;
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+            .tips {
+                align-items: stretch;
+                align-self: stretch;
+                display: flex;
+                flex-direction: column;
+                gap: $size-xsm;
+                padding: 0;
+                @media screen and (min-width: 768px) {
+                    background-color: rgba($gray, 1);
+                    border: 1px solid $white;
+                    margin-top: $size-xlg;
+                    padding: $size-lg;
+                }
+                @media screen and (min-width: 900px) {
+                    padding: $size-lg;
+                }
+                h5 {
+                    color: $brown;
+                    font-family: $circular;
+                    font-size: 20px;
+                    font-weight: normal;
+                    line-height: 1.25;
+                    margin: $size-xmd 0;
+                    text-align: center;
+                    @media screen and (min-width: 768px) {
+                        font-size: 28px;
+                    }
+                }
+                div {
+                    align-items: flex-start;
+                    align-self: stretch;
+                    background: $white;
+                    display: flex;
+                    gap: $size-xmd;
+                    @media screen and (min-width: 575px) {
+                        border: 1px solid $gray;
+                        padding: $size-md $size-md $size-md $size-md;
+                    }
+                    p {
+                        @include paragraph($margin-bottom: 0, $font-size: 16px, $line-height: 1.5, $font-family: $circular);
+                        border-left: 2px solid $red;
+                        color: $brown;
+                        font-family: $circular;
+                        padding: $size-sm $size-xmd;
+                        @media screen and (min-width: 768px) {
+                            font-size: 18px;
+                            padding: $size-xsm $size-xsm $size-xsm $size-md;
+                        }
+                    }
+                }
+            } 
+        }
+        &.submissions {
+            padding: 0;
+            @media screen and (min-width: 575px) {
+                background-color: rgba($white, 0.5);
+                border: 1px solid $white;
+                padding: $size-lg;
+            }
+            @media screen and (min-width: 900px) {
+                padding: $size-lg;
+            }
+            header {
+                h4 {
+                    @include h4-heading($before-color: $red, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/93a90a6da3ef61f641c36864d620d16a7004fb2c/img/megaphone.svg));
+                    color: $red;
+                }
+                p {
+                    @include paragraph( $font-family: $circular, $font-size: 16px);
+                    color: $dgray;
+                    line-height: 1.5;
+                    @media screen and (min-width: 575px) {
+                        font-size: 18px;
+                        margin: 0 0 $size-lg $size-xlg;
+                    }
+                    @media screen and (min-width: 900px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            div {
+                display: grid;
+                gap: $size-sm;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                @media screen and (min-width: 768px) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+                }
+                @media screen and (min-width: 900px) {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                }
+                article {
+                    background-color: $white;
+                    border-bottom: $size-base solid $red;
+                    display: flex;
+                    flex-direction: column;
+                    gap: $size-md;
+                    justify-content: flex-start;
+                    padding: $size-xmd;
+                    text-align: center;
+                    @media screen and (min-width: 768px) {
+                        padding: $size-lg;
+                    }
+                    img {
+                        aspect-ratio: 1/1;
+                        display: block;
+                        height: auto;
+                        margin: 0 auto;
+                        width: 100px;
+                    }
+                    p {
+                        @include paragraph($margin-bottom: 0, $font-family: $minion, $font-size: 16px);
+                        color: $brown;
+                        font-size: 16px;
+                        text-align: left;
+                        @media screen and (min-width: 780px) {
+                            font-size: 18px;
+                        }
+                        @media screen and (min-width: 1080px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    .contact {
+        @include paragraph($font-family: $circular, $font-size: 16px);
+        color: $dgray;
+        margin: $size-lg auto;
+        text-align: center;
+        @media screen and (min-width: 575px) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: 900px) {
+            font-size: 20px;
+        }
+        a {
+            color: $red;
+            font-family: $circular;
+            font-weight: bold;
+        }
+    } 
+}
