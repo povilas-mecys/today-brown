@@ -129,7 +129,7 @@
   }
 }
 .features .container.formatting article h4:before {
-  background-color: #FFC72C;
+  background-color: rgb(255, 199, 44);
   background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/289bd1e4b8d246b23963c2c65f81d54852831f85/img/rtf.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -154,7 +154,7 @@
   }
 }
 .features .container.formatting article p {
-  border-bottom: 4px solid #FFC72C;
+  border-bottom: 4px solid rgb(255, 199, 44);
   font-family: "CircularStd", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -195,7 +195,7 @@
   }
 }
 .features .container.formatting > p {
-  background: #FFC72C;
+  background: rgb(255, 199, 44);
   color: rgb(78, 54, 41);
   flex-basis: 25%;
   font-family: "CircularStd", sans-serif;

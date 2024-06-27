@@ -19,7 +19,7 @@ $brown: rgb(78, 54, 41);
 $black: rgb(0, 0, 0);
 $mediumgreen: rgb(0, 179, 152);
 $darkgreen: rgb(0, 134, 114);
-$yellow: #FFC72C;
+$yellow: rgb(255, 199, 44);
 // Font Variables
 $minion: "minion-pro",
 serif;
@@ -40,6 +40,7 @@ sans-serif;
     text-align: center;
     text-decoration: none;
     transition: 0.25s;
+
     @media screen and (min-width: 575px) {
         font-size: $font-size;
     }
@@ -61,6 +62,7 @@ sans-serif;
     margin-left: 0;
     padding: 0 0 $size-sm 0;
     position: relative;
+
     @media screen and (min-width: 575px) {
         font-size: $font-size;
         margin-left: $margin-left;
@@ -80,6 +82,7 @@ sans-serif;
         position: absolute;
         top: $before-top;
         width: $before-width;
+
         @media screen and (min-width: 575px) {
             display: block;
         }
@@ -101,8 +104,10 @@ sans-serif;
     gap: $size-lg;
     margin: auto;
     width: calc(100% - 40px);
+
     .container {
         padding: $size-md;
+
         @media screen and (min-width: 575px) {
             padding: $size-lg;
         }
@@ -111,7 +116,8 @@ sans-serif;
         }
         &.intro {
             background-color: $white;
-            h3 {
+
+h3 {
                 border-bottom: 2px solid lighten($dgray, $size-lg);
                 font-family: $circular;
                 margin: 0 0 $size-md 0;
@@ -119,6 +125,7 @@ sans-serif;
             }
             p {
                 @include paragraph($font-size: 16px);
+
                 @media screen and (min-width: 575px) {
                     @include paragraph($font-size: 18px);
                 }
@@ -139,6 +146,7 @@ sans-serif;
             flex-direction: column;
             gap: $size-xsm;
             padding: 0;
+
             @media screen and (min-width: 575px) {
                 background-color: rgba($white, 0.5);
                 border: 1px solid $white;
@@ -154,12 +162,14 @@ sans-serif;
                 color: $brown;
                 flex-basis: 75%;
                 padding: $size-md;
+
                 @media screen and (min-width: 575px) {
                     padding: $size-lg;
                 }
                 h4 {
                     @include h4-heading($before-color: $yellow, $background-image: url(https://raw.githubusercontent.com/povilas-mecys/today-brown/289bd1e4b8d246b23963c2c65f81d54852831f85/img/rtf.svg));
                     color: $brown;
+
                     @media screen and (min-width: 575px) {
                         margin-bottom: $size-sm;
                     }
@@ -171,6 +181,7 @@ sans-serif;
                     line-height: 1.5;
                     margin: 0 0 $size-md 0;
                     padding-bottom: $size-xmd;
+
                     @media screen and (min-width: 575px) {
                         font-size: 18px;
                     }
@@ -180,12 +191,14 @@ sans-serif;
                 }
                 ul {
                     margin: 0;
+
                     @media screen and (min-width: 575px) {
                         columns: 2;
                     }
                     li {
                         font-size: 16px;
                         padding-bottom: $size-xsm;
+
                         @media screen and (min-width: 575px) {
                             font-size: 18px;
                         }
@@ -204,6 +217,7 @@ sans-serif;
                 line-height: 1.5;
                 margin: 0;
                 padding: $size-md;
+
                 @media screen and (min-width: 575px) {
                     padding: $size-lg;
                 }
@@ -222,6 +236,7 @@ sans-serif;
             flex-direction: column;
             gap: $size-sm;
             padding: 0;
+
             @media screen and (min-width: 575px) {
                 background-color: rgba($white, 0.5);
                 border: 1px solid $white;
@@ -240,7 +255,9 @@ sans-serif;
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr;
                 padding: $size-lg 0 0 0;
-                @media screen and (min-width: 575px) {}
+
+                @media screen and (min-width: 575px) {
+}
                 @media screen and (min-width: 900px) {
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 1fr;
@@ -251,6 +268,7 @@ sans-serif;
                     flex-direction: column;
                     gap: $size-sm;
                     order: 1;
+
                     @media screen and (min-width: 900px) {
                         order: 0;
                     }
@@ -258,6 +276,7 @@ sans-serif;
                         @include paragraph($margin-bottom: 0, $font-size: 16px);
                         color: $brown;
                         line-height: 1.5;
+
                         @media screen and (min-width: 575px) {
                             font-size: 18px;
                         }
@@ -268,6 +287,7 @@ sans-serif;
                     a {
                         &.button {
                             @include button($red, $red, $white, $font-size: 18px, $padding: $size-xmd $size-sm);
+
                             @media screen and (min-width: 575px) {
                                 padding: $size-xmd $size-lg;
                             }
@@ -276,7 +296,8 @@ sans-serif;
                 }
                 figure {
                     margin: 0;
-                    img {
+
+img {
                         height: auto;
                         width: 100%;
                     }
@@ -289,6 +310,7 @@ sans-serif;
                 flex-direction: column;
                 gap: $size-xsm;
                 padding: 0;
+
                 @media screen and (min-width: 768px) {
                     background-color: rgba($gray, 1);
                     border: 1px solid $white;
@@ -306,6 +328,7 @@ sans-serif;
                     line-height: 1.25;
                     margin: $size-xmd 0;
                     text-align: center;
+
                     @media screen and (min-width: 768px) {
                         font-size: 28px;
                     }
@@ -316,6 +339,7 @@ sans-serif;
                     background: $white;
                     display: flex;
                     gap: $size-xmd;
+
                     @media screen and (min-width: 575px) {
                         border: 1px solid $gray;
                         padding: $size-md $size-md $size-md $size-md;
@@ -326,16 +350,18 @@ sans-serif;
                         color: $brown;
                         font-family: $circular;
                         padding: $size-sm $size-xmd;
+
                         @media screen and (min-width: 768px) {
                             font-size: 18px;
                             padding: $size-xsm $size-xsm $size-xsm $size-md;
                         }
                     }
                 }
-            } 
+            }
         }
         &.submissions {
             padding: 0;
+
             @media screen and (min-width: 575px) {
                 background-color: rgba($white, 0.5);
                 border: 1px solid $white;
@@ -353,6 +379,7 @@ sans-serif;
                     @include paragraph( $font-family: $circular, $font-size: 16px);
                     color: $dgray;
                     line-height: 1.5;
+
                     @media screen and (min-width: 575px) {
                         font-size: 18px;
                         margin: 0 0 $size-lg $size-xlg;
@@ -367,6 +394,7 @@ sans-serif;
                 gap: $size-sm;
                 grid-template-columns: repeat(1, 1fr);
                 grid-template-rows: repeat(2, 1fr);
+
                 @media screen and (min-width: 768px) {
                     grid-template-columns: repeat(1, 1fr);
                     grid-template-rows: repeat(1, 1fr);
@@ -384,6 +412,7 @@ sans-serif;
                     justify-content: flex-start;
                     padding: $size-xmd;
                     text-align: center;
+
                     @media screen and (min-width: 768px) {
                         padding: $size-lg;
                     }
@@ -399,6 +428,7 @@ sans-serif;
                         color: $brown;
                         font-size: 16px;
                         text-align: left;
+
                         @media screen and (min-width: 780px) {
                             font-size: 18px;
                         }
@@ -409,13 +439,13 @@ sans-serif;
                 }
             }
         }
-       
     }
     .contact {
         @include paragraph($font-family: $circular, $font-size: 16px);
         color: $dgray;
         margin: $size-lg auto;
         text-align: center;
+
         @media screen and (min-width: 575px) {
             font-size: 18px;
         }
@@ -427,5 +457,5 @@ sans-serif;
             font-family: $circular;
             font-weight: bold;
         }
-    } 
+    }
 }
